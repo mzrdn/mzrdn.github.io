@@ -67,18 +67,23 @@ h1 {
   letter-spacing: 1px;
 }
 
-/* Стиль для стрелки вниз */
+/* Стиль для сердечка (стрелки вниз) */
 .arrow {
-  font-size: 40px;
+  font-size: 60px;
   margin-top: 20px;
   cursor: pointer;
-  animation: bounce 1.5s infinite; /* Анимация для стрелки */
+  color: red;
+  animation: bounce 1.5s infinite; /* Анимация для сердечка */
 }
 
 @keyframes bounce {
   0% { transform: translateY(0); }
   50% { transform: translateY(15px); }
   100% { transform: translateY(0); }
+}
+
+.arrow:before {
+  content: "❤️"; /* Сердечко */
 }
 </style>
 
@@ -98,8 +103,8 @@ h1 {
     DATING
   </a>
 
-  <!-- Стрелка вниз -->
-  <div class="arrow">↓</div>
+  <!-- Стрелка в виде сердечка после английского текста "Contacts" -->
+  <div class="arrow"></div>
 
   <!-- Закрытие тега footer -->
   <div class="footer">Powered by HeyLink</div>
