@@ -14,6 +14,7 @@ body {
   background: #00aaff; /* Неоново-синий фон */
   color: #fff;
   text-align: center;
+  overflow-x: hidden;
 }
 
 /* Контейнер для содержимого */
@@ -32,6 +33,17 @@ h1 {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-weight: bold;
+  animation: typewriter 2s steps(22) 1s forwards; /* Анимация для текста */
+}
+
+/* Эффект печатания текста */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 /* Кнопки с огненным эффектом */
@@ -57,6 +69,23 @@ h1 {
 
 .button:active {
   transform: scale(1); /* Нормальный размер при нажатии */
+}
+
+/* Иконки социальных сетей */
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  margin: 0 15px;
+  font-size: 30px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s;
+}
+
+.social-icons a:hover {
+  transform: scale(1.2); /* Увеличение иконок при наведении */
 }
 
 /* Подпись футера */
@@ -103,8 +132,15 @@ h1 {
     DATING
   </a>
 
-  <!-- Стрелка в виде сердечка после английского текста "Contacts" -->
+  <!-- Сердечко после "Contacts" -->
   <div class="arrow"></div>
+
+  <!-- Иконки социальных сетей -->
+  <div class="social-icons">
+    <a href="#" target="_blank">🔗</a>
+    <a href="#" target="_blank">📱</a>
+    <a href="#" target="_blank">🌍</a>
+  </div>
 
   <!-- Закрытие тега footer -->
   <div class="footer">Powered by HeyLink</div>
