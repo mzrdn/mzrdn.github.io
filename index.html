@@ -6,47 +6,78 @@
 <title>Моя страница</title>
 
 <style>
+/* Общие стили */
 body {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
-  background: #f2f2f2; /* Светлый фон */
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #ff6f61, #ffcc6b); /* Градиентный фон */
+  color: #fff;
   text-align: center;
-  color: #333;
 }
 
+/* Контейнер для содержимого */
 .container {
-  padding: 50px 10px;
+  padding: 60px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Полупрозрачный фон */
+  border-radius: 15px;
 }
 
+/* Заголовок страницы */
+h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+/* Кнопки */
 .button {
-  display: block;
-  width: 90%;
-  max-width: 350px;
-  margin: 12px auto;
-  padding: 14px;
-  background: #ff4081; /* Розовый цвет кнопок */
-  border-radius: 12px;
+  display: inline-block;
+  width: 200px;
+  padding: 16px;
+  margin: 15px;
+  background-color: #ff4081; /* Ярко-розовый фон */
+  border-radius: 50px;
   text-decoration: none;
+  color: white;
   font-size: 20px;
   font-weight: bold;
-  color: #fff;
-  transition: background 0.3s ease;
+  transition: transform 0.3s ease, background-color 0.3s ease;
 }
 
 .button:hover {
-  background: #e02f6f; /* Тёмный розовый при наведении */
+  background-color: #e02f6f; /* Тёмный розовый при наведении */
+  transform: translateY(-5px); /* Лёгкий подъём кнопки при наведении */
 }
 
+.button:active {
+  transform: translateY(0); /* Снижение эффекта при нажатии */
+}
+
+/* Подпись футера */
 .footer {
-  margin-top: 25px;
-  font-size: 14px;
+  margin-top: 30px;
+  font-size: 16px;
   opacity: 0.8;
+  letter-spacing: 1px;
 }
 
-h1 {
-  font-size: 32px;
-  color: #333;
+/* Стиль для стрелки вниз */
+.arrow {
+  font-size: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Анимация для стрелки */
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0); }
 }
 </style>
 
@@ -54,18 +85,22 @@ h1 {
 <body>
 
 <div class="container">
-  <h1>Добро пожаловать!</h1>
-
+  <h1>К новым знакомствам!</h1>
+  
   <!-- Кнопки -->
   <a class="button" href="https://tone.affomelody.com/click?pid=62259&offer_id=25" target="_blank">
     ЗНАКОМСТВА 18+
   </a>
 
   <a class="button" href="https://tone.affomelody.com/click?pid=62259&offer_id=25" target="_blank">
-    DATING 
+    DATING
   </a>
 
-  <div class="footer"
+  <!-- Стрелка вниз -->
+  <div class="arrow">↓</div>
+
+  <!-- Закрытие тега footer -->
+  <div class="footer"></div>
 </div>
 
 </body>
