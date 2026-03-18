@@ -14,17 +14,6 @@ body {
   background: #00aaff; /* Неоново-синий фон */
   color: #fff;
   text-align: center;
-  animation: pulse 2s infinite alternate; /* Пульсация фона */
-}
-
-/* Пульсация фона */
-@keyframes pulse {
-  0% {
-    background: #00aaff;
-  }
-  100% {
-    background: #0088cc;
-  }
 }
 
 /* Контейнер для содержимого */
@@ -59,7 +48,6 @@ h1 {
   font-weight: bold;
   box-shadow: 0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255, 69, 0, 0.8); /* Огненная тень */
   transition: transform 0.3s ease, background-color 0.3s ease;
-  animation: fireButton 1s infinite alternate; /* Анимация для кнопок */
 }
 
 .button:hover {
@@ -71,16 +59,51 @@ h1 {
   transform: scale(1); /* Нормальный размер при нажатии */
 }
 
-/* Анимация огненных кнопок */
-@keyframes fireButton {
-  0% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255, 69, 0, 0.8);
-  }
-  50% {
-    transform: scale(1.1);
-    box-shadow: 0 0 25px rgba(255, 69, 0, 0.8), 0 0 50px rgba(255, 69, 0, 1);
-  }
-  100% {
-    transform: scale(1);
-    box-shadow: 0 0 15px rgba(255, 69, 0, 0.6), 0 0 30px rgba(255,
+/* Подпись футера */
+.footer {
+  margin-top: 30px;
+  font-size: 16px;
+  opacity: 0.8;
+  letter-spacing: 1px;
+}
+
+/* Стиль для стрелки вниз */
+.arrow {
+  font-size: 40px;
+  margin-top: 20px;
+  cursor: pointer;
+  animation: bounce 1.5s infinite; /* Анимация для стрелки */
+}
+
+@keyframes bounce {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(15px); }
+  100% { transform: translateY(0); }
+}
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h1>Контакты</h1> <!-- Заголовок на русском -->
+  <h1>Contacts</h1> <!-- Заголовок на английском -->
+  
+  <!-- Кнопки с огненным эффектом и ссылками -->
+  <a class="button" href="https://tone.affomelody.com/click?pid=62259&offer_id=25" target="_blank">
+    ЗНАКОМСТВА 18+
+  </a>
+
+  <a class="button" href="https://tone.affomelody.com/click?pid=62259&offer_id=25" target="_blank">
+    DATING
+  </a>
+
+  <!-- Стрелка вниз -->
+  <div class="arrow">↓</div>
+
+  <!-- Закрытие тега footer -->
+  <div class="footer">Powered by HeyLink</div>
+</div>
+
+</body>
+</html>
